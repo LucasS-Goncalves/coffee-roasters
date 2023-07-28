@@ -51,12 +51,17 @@
   font-family: var(--fraunces);
   line-height: 32px;
   color: var(--dark-grey-blue);
+  opacity: 0;
   cursor: pointer;
-  transition: .2s;
+  transition: .4s;
 }
 
 .header nav .links .link:first-child{
   padding-top: 3rem;
+}
+
+.header.opened nav .links .link{
+  opacity: 1;
 }
 
 .header .hamburger,
@@ -118,6 +123,8 @@
     letter-spacing: .92px;
     text-transform: uppercase;
     color: var(--grey);
+    opacity: 1;
+    transition: .2s;
   }
 
   .header nav .links .link:first-child{
@@ -128,4 +135,10 @@
     color: var(--dark-grey-blue);
   }
 
+}
+
+@media(min-width: 1440px){
+  .header{
+    padding: 2.5rem 5.5rem;
+  }
 }
