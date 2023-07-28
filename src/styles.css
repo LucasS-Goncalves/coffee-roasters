@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --dark-cyan: hsl(179, 81%, 29%);
+  --main-button-hover: #66D2CF;
+  --main-button-disabled: #E2DEDB;
+  --dark-gray-blue: hsl(215, 19%, 25%);
+  --pale-orange: hsl(25, 94%, 86%);
+  --light-cream: hsl(43, 78%, 98%);
+  --gray: hsl(215, 5%, 54%);
+  --big-selection-option: #F4F1EB;
+}
+
+p,h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+}
