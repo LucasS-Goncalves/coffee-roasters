@@ -53,6 +53,7 @@
   font-family: var(--fraunces);
   line-height: 32px;
   color: var(--dark-grey-blue);
+  cursor: pointer;
 }
 
 .header .hamburger,
