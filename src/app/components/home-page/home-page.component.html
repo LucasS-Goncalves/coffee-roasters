@@ -22,14 +22,14 @@
     </article>
   </section>
 
-  <section class="colection">
-    <h2>
+  <section class="collection">
+    <h2 class="collection_section_title">
       Our collection
     </h2>
-    <ul class="items_container">
-      <li *ngFor="let item of colectionItems">
+    <ul class="items_list">
+      <li class="item" *ngFor="let item of collectionItems">
         <img [src]="item.itemImg" alt="Item image" class="item_img">
-        <article>
+        <article class="item_Info">
           <h3 class="item_name">
             {{item.itemName}}
           </h3>

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HomePageComponent {
 
-  colectionItems = [
+  collectionItems = [
     {
       itemImg: '../../../assets/home/desktop/image-gran-espresso.png',
       itemName: 'Gran Espresso',
