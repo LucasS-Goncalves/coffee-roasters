@@ -29,4 +29,25 @@ export class HomePageComponent {
       itemDescription: 'Ethiopian hand-harvested blend densely packed with vibrant fruit notes'
     },
   ]
+
+  benefits = [
+    {
+      iconSrc: `../../../assets/home/desktop/icon-coffee-bean.svg`,
+      benefitName: 'Best quality',
+      description: 'Discover an endless variety of the world’s best artisan coffee from each of our roasters.',
+      alt: 'Coffee bean icon'
+    },
+    {
+      iconSrc: '../../../assets/home/desktop/icon-gift.svg',
+      benefitName: 'Exclusive benefits',
+      description: 'Special offers and swag when you subscribe, including 30% off your first shipment.',
+      alt: 'Gift icon'
+    },
+    {
+      iconSrc: '../../../assets/home/desktop/icon-truck.svg',
+      benefitName: 'Free shipping',
+      description: 'We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.',
+      alt: 'Truck icon'
+    }
+  ]
 }

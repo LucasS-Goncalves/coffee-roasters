@@ -40,4 +40,26 @@
       </li>
     </ul>
   </section>
+
+  <section class="chooseUs">
+    <article class="why_text">
+      <h2 class="section_title">
+        Why choose us?
+      </h2>
+      <p class="section_description">
+        A large part of our role is choosing which particular coffees will be featured
+        in our range. This means working closely with the best coffee growers to give
+        you a more impactful experience on every level.
+      </p>
+    </article>
+    <ul class="benefits_list">
+      <li class="benefit" *ngFor="let benefit of benefits">
+        <img class="benefit_icon" [src]="benefit.iconSrc" [alt]="benefit.alt">
+        <article class="benefit_info">
+          <h3 class="benefit_name">{{benefit.benefitName}}</h3>
+          <p class="benefit_description">{{benefit.description}}</p>
+        </article>
+      </li>
+    </ul>
+  </section>
 </main>
