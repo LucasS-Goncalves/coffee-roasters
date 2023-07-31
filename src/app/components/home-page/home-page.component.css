@@ -402,6 +402,41 @@
     font-size: 2.5rem;
     line-height: 48px;
   }
+
+  .chooseUs .benefits_list{
+    width: 900px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+    top: 320px;
+  }
+
+  .chooseUs .benefits_list .benefit{
+    width: 275px;
+    height: 330px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+  }
+
+  .chooseUs .benefits_list .benefit .benefit_icon{
+    width: 72px;
+  }
+
+  .chooseUs .benefits_list .benefit .benefit_info{
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .chooseUs .benefits_list .benefit:last-child .benefit_info{
+    margin-top: 22px;
+  }
+
+  .chooseUs .benefits_list .benefit .benefit_info .benefit_description{
+    width: 235px;
+  }
 }
 
 @media(min-width:1440px){
@@ -429,5 +464,32 @@
 
   .collection .items_list .item .item_img{
     width: 256px;
+  }
+
+  .chooseUs .why_text{
+    width: 1280px;
+  }
+
+  .chooseUs .benefits_list{
+    width: 1100px;
+    top: 310px;
+  }
+
+  .chooseUs .benefits_list .benefit{
+    width: 350px;
+    height: 382px;
+  }
+
+  .chooseUs .benefits_list .benefit .benefit_info{
+    gap: 1.5rem;
+  }
+
+  .chooseUs .benefits_list .benefit:last-child .benefit_info{
+    margin-top: 22px;
+  }
+
+  .chooseUs .benefits_list .benefit .benefit_info .benefit_description{
+    width: 255px;
+    font-size: 1rem;
   }
 }
