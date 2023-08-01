@@ -3,7 +3,13 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css', './styles/work-steps.component.css']
+  styleUrls: [
+    './home-page.component.css',
+    './styles/main-img-section.component.css',
+    './styles/collection-section.component.css',
+    './styles/choose-us-section.component.css',
+    './styles/work-steps-section.component.css',
+  ]
 })
 export class HomePageComponent {
 
