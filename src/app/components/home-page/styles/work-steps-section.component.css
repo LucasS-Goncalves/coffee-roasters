@@ -57,6 +57,9 @@
 .howItWorks .createYourPlan_button{
   width: 217px;
   height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   border-radius: 8px;
   background-color: var(--dark-cyan);
@@ -65,7 +68,14 @@
   font-weight: 900;
   line-height: 25px;
   color: var(--light-cream);
+  cursor: pointer;
+  transition: .3s;
 }
+
+.howItWorks .createYourPlan_button:hover{
+  background-color: var(--main-button-hover);
+}
+
 
 @media(min-width: 768px){
 
