@@ -66,3 +66,54 @@
   line-height: 25px;
   color: var(--light-cream);
 }
+
+@media(min-width: 768px){
+
+  .howItWorks{
+    width: 689px;
+    align-items: flex-start;
+    gap: 4rem;
+    margin-top: 30rem;
+  }
+
+  .howItWorks .workSteps_list{
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0rem;
+    justify-content: space-between;
+  }
+
+  .howItWorks .workSteps_list .workStep{
+    width: 223px;
+    gap: 2rem;
+    align-items: flex-start;
+    text-align: start;
+  }
+}
+
+@media(min-width: 1200px){
+
+  .howItWorks{
+    width: 1045px;
+    margin-top: 18rem;
+  }
+
+  .howItWorks .workSteps_list .workStep{
+    width: 285px;
+  }
+
+  .howItWorks .workSteps_list .workStep .workStep_name{
+    width: 255px;
+    font-size: 2rem;
+    line-height: 36px;
+  }
+
+  .howItWorks .workSteps_list .workStep .workStep_name{
+    font-size: 2rem;
+  }
+
+  .howItWorks .workSteps_list .workStep .workStep_description{
+    font-size: 1rem;
+  }
+}
