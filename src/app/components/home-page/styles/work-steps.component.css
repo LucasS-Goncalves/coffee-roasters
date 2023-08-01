@@ -1,0 +1,68 @@
+.howItWorks{
+  width: 327px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 46rem;
+}
+
+.howItWorks .howItWorks_section_title{
+  font-size: 1.5rem;
+  font-family: var(--fraunces);
+  font-weight: 900;
+  line-height: 32px;
+  color: var(--grey);
+}
+
+.howItWorks .workSteps_list{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.howItWorks .workSteps_list .workStep{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.howItWorks .workSteps_list .workStep .workStep_number{
+  font-size: 4.5rem;
+  font-family: var(--fraunces);
+  font-weight: 900;
+  line-height: 72px;
+  color: var(--pale-orange);
+}
+
+.howItWorks .workSteps_list .workStep .workStep_name{
+  font-size: 1.75rem;
+  font-family: var(--fraunces);
+  font-weight: 900;
+  line-height: 32px;
+  color: var(--dark-grey-blue);
+}
+
+.howItWorks .workSteps_list .workStep .workStep_description{
+  font-size: .9375rem;
+  font-family: var(--barlow);
+  font-weight: 400;
+  line-height: 25px;
+  color: var(--dark-grey-blue);
+}
+
+.howItWorks .createYourPlan_button{
+  width: 217px;
+  height: 56px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--dark-cyan);
+  font-size: 1.125rem;
+  font-family: var(--fraunces);
+  font-weight: 900;
+  line-height: 25px;
+  color: var(--light-cream);
+}

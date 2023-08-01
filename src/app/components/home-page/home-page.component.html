@@ -62,4 +62,26 @@
       </li>
     </ul>
   </section>
+
+  <section class="howItWorks">
+    <h2 class="howItWorks_section_title">
+      How it works
+    </h2>
+    <ul class="workSteps_list">
+      <li class="workStep" *ngFor="let step of workSteps">
+        <span class="workStep_number">
+          {{step.number}}
+        </span>
+        <h3 class="workStep_name">
+          {{step.stepName}}
+        </h3>
+        <p class="workStep_description">
+          {{step.stepDescription}}
+        </p>
+      </li>
+    </ul>
+    <button class="createYourPlan_button">
+      Create your plan
+    </button>
+  </section>
 </main>
