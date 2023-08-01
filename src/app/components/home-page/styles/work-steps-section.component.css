@@ -15,6 +15,10 @@
   color: var(--grey);
 }
 
+.howItWorks .draw{
+  display: none;
+}
+
 .howItWorks .workSteps_list{
   list-style: none;
   display: flex;
@@ -57,11 +61,8 @@
 .howItWorks .createYourPlan_button{
   width: 217px;
   height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   background-color: var(--dark-cyan);
   font-size: 1.125rem;
   font-family: var(--fraunces);
@@ -86,6 +87,25 @@
     margin-top: 30rem;
   }
 
+  .howItWorks .draw{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .howItWorks .draw .circle{
+    width: 31px;
+    height: 31px;
+    border: 2px solid var(--dark-cyan);
+    border-radius: 100%;
+  }
+
+  .howItWorks .draw .line{
+    width: 202px;
+    height: 2px;
+    background-color: var(--pale-orange);
+  }
+
   .howItWorks .workSteps_list{
     width: 100%;
     flex-direction: row;
@@ -107,6 +127,10 @@
   .howItWorks{
     width: 1045px;
     margin-top: 18rem;
+  }
+
+  .howItWorks .draw .line{
+    width: 349px;
   }
 
   .howItWorks .workSteps_list .workStep{
