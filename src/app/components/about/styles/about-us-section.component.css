@@ -1,0 +1,42 @@
+.aboutUs{
+  width: 327px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.aboutUs .img_container,
+.aboutUs .img_container .picture{
+  width: 100%;
+}
+
+.aboutUs .img_container .picture .image{
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.aboutUs .aboutUs_info{
+  position: absolute;
+  top: 30%;
+  text-align: center;
+}
+
+.aboutUs .aboutUs_info .aboutUs_title{
+  font-size: 1.75rem;
+  font-family: var(--fraunces);
+  font-weight: 900;
+  line-height: 28px;
+  color: var(--light-cream);
+  margin-bottom: 1.5rem;
+}
+
+.aboutUs .aboutUs_info .aboutUs_description{
+  width: 279px;
+  font-size: .9375rem;
+  font-family: var(--barlow);
+  font-weight: 400;
+  line-height: 25px;
+  color: var(--light-cream-descriptions);
+}

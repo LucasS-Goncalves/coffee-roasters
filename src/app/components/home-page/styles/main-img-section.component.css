@@ -8,10 +8,7 @@
   transition: .3s;
 }
 
-.main_img .img_container{
-  width: 100%;
-}
-
+.main_img .img_container,
 .main_img .img_container .picture{
   width: 100%;
 }
