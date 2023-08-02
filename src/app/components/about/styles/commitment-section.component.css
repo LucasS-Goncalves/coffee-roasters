@@ -67,3 +67,29 @@
     text-align: start;
   }
 }
+
+@media(min-width: 1200px){
+
+  .commitment{
+    width: 1110px;
+  }
+
+  .commitment_img_container,
+  .commitment_img_container .picture{
+    width: 445px;
+    height: 520px;
+  }
+
+  .commitment .commitment_info{
+    width: 540px;
+  }
+
+  .commitment .commitment_info .commitment_title{
+    font-size: 2.5rem;
+  }
+
+  .commitment .commitment_info .commitment_description{
+    font-size: 1rem;
+    line-height: 26px;
+  }
+}
