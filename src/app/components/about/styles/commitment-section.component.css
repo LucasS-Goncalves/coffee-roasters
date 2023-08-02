@@ -10,7 +10,8 @@
 
 .commitment_img_container,
 .commitment_img_container .picture{
-  width: 100%;
+  width: 327px;
+  height: 400px;
 }
 
 .commitment_img_container .picture .commitment_img{
@@ -41,4 +42,28 @@
   font-weight: 400;
   line-height: 25px;
   color: var(--grey);
+}
+
+@media(min-width: 768px){
+
+  .commitment{
+    width: 689px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+    margin-top: 10rem;
+  }
+
+  .commitment_img_container,
+  .commitment_img_container .picture{
+    width: 281px;
+    height: 470px;
+  }
+
+  .commitment .commitment_info{
+    width: 339px;
+    align-items: flex-start;
+    gap: 2rem;
+    text-align: start;
+  }
 }
