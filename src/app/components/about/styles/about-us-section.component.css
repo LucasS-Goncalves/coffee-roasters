@@ -1,8 +1,6 @@
 .aboutUs{
   width: 327px;
   height: 400px;
-  display: flex;
-  justify-content: center;
   position: relative;
 }
 
@@ -20,6 +18,8 @@
 .aboutUs .aboutUs_info{
   position: absolute;
   top: 30%;
+  left: 50%;
+  translate: -50%;
   text-align: center;
 }
 
@@ -39,4 +39,13 @@
   font-weight: 400;
   line-height: 25px;
   color: var(--light-cream-descriptions);
+}
+
+@media(min-width: 768px){
+
+  .aboutUs{
+    width: 689px;
+    height: 400px;
+  }
+
 }
