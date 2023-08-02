@@ -48,4 +48,20 @@
     height: 400px;
   }
 
+  .aboutUs .aboutUs_info{
+    left: 8%;
+    translate: 0;
+    text-align: start;
+  }
+
+  .aboutUs .aboutUs_info .aboutUs_title{
+    font-size: 2rem;
+    line-height: 40px;
+  }
+
+  .aboutUs .aboutUs_info .aboutUs_description{
+    width: 398px;
+}
+
+
 }
