@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: [
     './about.component.css',
     './styles/about-us-section.component.css',
-    './styles/commitment-section.component.css'
+    './styles/commitment-section.component.css',
+    './styles/quality-section.component.css'
   ]
 })
 export class AboutComponent {
