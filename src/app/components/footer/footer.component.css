@@ -1,7 +1,7 @@
 .footer{
   width: 87%;
   margin: 0 auto;
-  margin-top: 8rem;
+  padding-top: 8rem;
 }
 
 .container{
@@ -75,7 +75,7 @@
 
   .footer{
     min-width: 689px;
-    margin-top: 10rem;
+    padding-top: 10rem;
   }
 
   .container{
