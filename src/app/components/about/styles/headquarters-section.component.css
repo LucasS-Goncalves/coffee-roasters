@@ -86,3 +86,19 @@
     text-align: start;
   }
 }
+
+@media(min-width: 1200px){
+
+  .headquarters{
+    width: 1045px;
+    margin-top: 10rem;
+  }
+
+  .headquarters_list .headquarter{
+    width: 285px;
+  }
+
+  .headquarters_list .headquarter .headquarter_texts .headquarter_location{
+    font-size: 2rem;
+  }
+}
