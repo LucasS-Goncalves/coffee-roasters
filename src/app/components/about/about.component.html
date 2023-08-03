@@ -66,4 +66,22 @@
       </p>
     </article>
   </section>
+
+  <section class="headquarters">
+    <h2 class="headquarters_title">
+      Our headquarters
+    </h2>
+    <ul class="headquarters_list">
+      <li class="headquarter" *ngFor="let headquarter of headquarters">
+        <img [src]="headquarter.img" alt="" class="headquarter_img">
+        <article class="headquarter_texts">
+          <h3 class="headquarter_location">
+            {{headquarter.location}}
+          </h3>
+          <p class="headquarter_info" [innerHTML]="headquarter.info">
+          </p>
+        </article>
+      </li>
+    </ul>
+  </section>
 </main>
