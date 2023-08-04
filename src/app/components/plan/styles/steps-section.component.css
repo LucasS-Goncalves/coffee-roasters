@@ -1,0 +1,150 @@
+.steps{
+  width: 100%;
+  max-width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 7rem;
+  padding: 5rem 0;
+  background-color: var(--dark-grey-blue);
+  border-radius: 12px;
+}
+
+.steps .draw{
+  display: none;
+}
+
+.steps .steps_list{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.steps .steps_list .step{
+  width: 327px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.steps .steps_list .step .step_number{
+  font-size: 4.5rem;
+  font-family: var(--fraunces);
+  font-weight: 900;
+  line-height: 72px;
+  color: var(--pale-orange);
+}
+
+.steps .steps_list .step .step_name{
+  font-size: 1.75rem;
+  font-family: var(--fraunces);
+  font-weight: 900;
+  line-height: 32px;
+  color: var(--light-cream);
+}
+
+.steps .steps_list .step .step_description{
+  font-size: .9375rem;
+  font-family: var(--barlow);
+  font-weight: 400;
+  line-height: 25px;
+  color: var(--light-cream-descriptions);
+}
+
+.steps .createYourPlan_button{
+  width: 217px;
+  height: 56px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--dark-cyan);
+  font-size: 1.125rem;
+  font-family: var(--fraunces);
+  font-weight: 900;
+  line-height: 25px;
+  color: var(--light-cream);
+  cursor: pointer;
+  transition: .3s;
+}
+
+.steps .createYourPlan_button:hover{
+  background-color: var(--main-button-hover);
+}
+
+
+@media(min-width: 768px){
+
+  .steps{
+    width: 689px;
+    align-items: flex-start;
+    gap: 4rem;
+    margin-top: 30rem;
+  }
+
+  .steps .draw{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .steps .draw .circle{
+    width: 31px;
+    height: 31px;
+    border: 2px solid var(--dark-cyan);
+    border-radius: 100%;
+  }
+
+  .steps .draw .line{
+    width: 202px;
+    height: 2px;
+    background-color: var(--pale-orange);
+  }
+
+  .steps .steps_list{
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0rem;
+    justify-content: space-between;
+  }
+
+  .steps .steps_list .step{
+    width: 223px;
+    gap: 2rem;
+    align-items: flex-start;
+    text-align: start;
+  }
+}
+
+@media(min-width: 1200px){
+
+  .steps{
+    width: 1045px;
+    margin-top: 18rem;
+  }
+
+  .steps .draw .line{
+    width: 349px;
+  }
+
+  .steps .steps_list .step{
+    width: 285px;
+  }
+
+  .steps .steps_list .step .step_name{
+    width: 255px;
+    font-size: 2rem;
+    line-height: 36px;
+  }
+
+  .steps .steps_list .step .step_name{
+    font-size: 2rem;
+  }
+
+  .steps .steps_list .step .step_description{
+    font-size: 1rem;
+  }
+}

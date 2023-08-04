@@ -18,4 +18,27 @@
       </p>
     </article>
   </section>
+
+  <section class="steps">
+    <div class="draw">
+      <div class="circle"></div>
+      <div class="line"></div>
+      <div class="circle"></div>
+      <div class="line"></div>
+      <div class="circle"></div>
+    </div>
+    <ul class="steps_list">
+      <li class="step" *ngFor="let step of steps">
+        <span class="step_number">
+          {{step.number}}
+        </span>
+        <h3 class="step_name">
+          {{step.stepName}}
+        </h3>
+        <p class="step_description">
+          {{step.stepDescription}}
+        </p>
+      </li>
+    </ul>
+  </section>
 </main>
