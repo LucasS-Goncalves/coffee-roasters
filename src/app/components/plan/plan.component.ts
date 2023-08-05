@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-plan',
@@ -11,6 +11,12 @@ import { Component } from '@angular/core';
   ]
 })
 export class PlanComponent {
+
+  howYouDrinkYourCoffee = '';
+  typeOfCoffee = '';
+  howMuch = '';
+  grind = '';
+  howOften = '';
 
   steps = [
     {
@@ -33,6 +39,7 @@ export class PlanComponent {
   options = [
     {
       question: 'How do you drink your coffee?',
+      category: 'drink',
       innerOptions: [
         {
           optionName: 'Capsule',
@@ -50,6 +57,7 @@ export class PlanComponent {
     },
     {
       question: 'What type of coffee?',
+      category: 'type',
       innerOptions: [
         {
           optionName: 'Single origin',
@@ -67,6 +75,7 @@ export class PlanComponent {
     },
     {
       question: 'How much would you like??',
+      category: 'howMuch',
       innerOptions: [
         {
           optionName: '250g',
@@ -84,6 +93,7 @@ export class PlanComponent {
     },
     {
       question: 'Want us to grind them?',
+      category: 'grind',
       innerOptions: [
         {
           optionName: 'Wholebean',
@@ -101,6 +111,7 @@ export class PlanComponent {
     },
     {
       question: 'How often should we deliver?',
+      category: 'howOften',
       innerOptions: [
         {
           optionName: 'Every week',
@@ -117,5 +128,42 @@ export class PlanComponent {
       ]
     },
 
-  ]
+  ];
+
+  addActiveClass(event: HTMLLIElement){
+    const li = event;
+    const ul = event.parentNode;
+    const currentActiveLi = ul?.querySelector('.active');
+    if(currentActiveLi === li){
+      li.classList.remove('active')
+    } else {
+      currentActiveLi?.classList.remove('active')
+      li.classList.add('active')
+    }
+
+  }
+
+  selectOption(event: HTMLLIElement, optionName: string){
+    const li = event;
+
+    if(li.id === 'drink'){
+      this.howYouDrinkYourCoffee === optionName ? this.howYouDrinkYourCoffee = '' : this.howYouDrinkYourCoffee = optionName;
+    }
+
+    if(li.id === 'type'){
+      this.typeOfCoffee === optionName ? this.typeOfCoffee = '' : this.typeOfCoffee = optionName;
+    }
+
+    if(li.id === 'howMuch'){
+      this.howMuch === optionName ? this.howMuch = '' : this.howMuch = optionName;
+    }
+
+    if(li.id === 'grind'){
+      this.grind === optionName ? this.grind = '' : this.grind = optionName;
+    }
+
+    if(li.id === 'howOften'){
+      this.howOften === optionName ? this.howOften = '' : this.howOften = optionName;
+    }
+  }
 }
