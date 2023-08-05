@@ -63,4 +63,20 @@
       </li>
     </ul>
   </section>
+
+  <section class="order_summary">
+    <article class="order_summary_info">
+      <h3 class="order_summary_title">
+        ORDER SUMMARY
+      </h3>
+      <p class="order_summary_text" *ngIf="howYouDrinkYourCoffee !== 'Capsule'">
+        “I drink coffee <span [ngClass]="{'underline': howYouDrinkYourCoffee === ''}">{{howYouDrinkYourCoffee !== '' ? howYouDrinkYourCoffee : '_____'}}</span>, with a <span [ngClass]="{'underline': typeOfCoffee === ''}">{{typeOfCoffee !== '' ? typeOfCoffee : '_____'}}</span> type of bean. <span [ngClass]="{'underline': howMuch === ''}">{{howMuch !== '' ? howMuch : '_____'}}</span> ground ala <span [ngClass]="{'underline': grind === ''}">{{grind !== '' ? grind : '_____'}}</span>, sent to me <span [ngClass]="{'underline': howOften === ''}">{{howOften !== '' ? howOften : '_____'}}</span>.”
+      </p>
+      <p class="order_summary_text" *ngIf="howYouDrinkYourCoffee === 'Capsule'">
+        “I drink my coffee using <span>{{howYouDrinkYourCoffee}}</span>, with a <span [ngClass]="{'underline': typeOfCoffee === ''}">{{typeOfCoffee !== '' ? typeOfCoffee : '_____'}}</span> type of bean. <span [ngClass]="{'underline': howMuch === ''}">{{howMuch !== '' ? howMuch : '_____'}}</span>,
+        sent to me <span [ngClass]="{'underline': howOften === ''}">{{howOften !== '' ? howOften : '_____'}}</span>.”
+      </p>
+    </article>
+    <button class="order_button">Create my plan!</button>
+  </section>
 </main>

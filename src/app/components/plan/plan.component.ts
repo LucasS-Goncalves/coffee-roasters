@@ -7,7 +7,8 @@ import { Component, ElementRef } from '@angular/core';
     './plan.component.css',
     './styles/main-img-section.component.css',
     './styles/steps-section.component.css',
-    './styles/order-section.component.css'
+    './styles/order-section.component.css',
+    './styles/order-summary-section.component.css'
   ]
 })
 export class PlanComponent {
@@ -140,7 +141,6 @@ export class PlanComponent {
       currentActiveLi?.classList.remove('active')
       li.classList.add('active')
     }
-
   }
 
   selectOption(event: HTMLLIElement, optionName: string){
