@@ -82,6 +82,7 @@
     height: 31px;
     border: 2px solid var(--dark-cyan);
     border-radius: 100%;
+    z-index: 1;
   }
 
   .steps .draw .line{
@@ -112,18 +113,26 @@
 
   .steps{
     width: 1100px;
+    padding: 7rem 4rem;
+  }
+
+  .steps .draw{
+    width: 684px;
   }
 
   .steps .draw .line{
-    width: 349px;
+    width: 653px;
+  }
+
+  .steps .steps_list{
+    width: 898px;
   }
 
   .steps .steps_list .step{
-    width: 285px;
+    width: 245px;
   }
 
   .steps .steps_list .step .step_name{
-    width: 255px;
     font-size: 2rem;
     line-height: 36px;
   }
@@ -136,3 +145,29 @@
     font-size: 1rem;
   }
 }
+
+@media(min-width: 1440px){
+
+  .steps{
+    width: 1280px;
+    padding: 7rem 4rem;
+  }
+
+  .steps .draw{
+    width: 791px;
+  }
+
+  .steps .draw .line{
+    width: 760px;
+  }
+
+  .steps .steps_list{
+    width: 1045px;
+  }
+
+  .steps .steps_list .step{
+    width: 285px;
+  }
+}
+
+
