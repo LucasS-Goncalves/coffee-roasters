@@ -1,6 +1,15 @@
 .order{
   width: 328px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin-top: 7rem;
+}
+
+.index_section .index_item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .listOfOptions{
@@ -111,5 +120,21 @@
     height: 250px;
     justify-content: flex-start;
     gap: 1.5rem;
+  }
+}
+
+@media(min-width: 1200px){
+
+  .order{
+    width: 730px;
+  }
+
+  .listOfOptions .option .question_and_arrow_div .question{
+    width: 632px;
+    font-size: 2.5rem;
+  }
+
+  .listOfOptions .option .inner_options_list .inner_option{
+    width: 228px;
   }
 }

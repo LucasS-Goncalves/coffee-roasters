@@ -131,6 +131,29 @@ export class PlanComponent {
 
   ];
 
+  indexList = [
+    {
+      number: '01',
+      name: 'Preferences'
+    },
+    {
+      number: '02',
+      name: 'Bean type'
+    },
+    {
+      number: '03',
+      name: 'Quantity'
+    },
+    {
+      number: '04',
+      name: 'Grind option'
+    },
+    {
+      number: '05',
+      name: 'Deliveries'
+    },
+  ]
+
   addActiveClass(event: HTMLLIElement){
     const li = event;
     const ul = event.parentNode;

@@ -42,6 +42,17 @@
   </section>
 
   <section class="order">
+    <ul class="index_section">
+      <li class="index_item" *ngFor="let item of indexList">
+        <p class="number">
+          {{item.number}}
+        </p>
+        <h4 class="name">
+          {{item.name}}
+        </h4>
+      </li>
+    </ul>
+
     <ul class="listOfOptions">
       <li class="option" *ngFor="let option of options">
         <div class="question_and_arrow_div">
