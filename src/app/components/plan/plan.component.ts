@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: [
     './plan.component.css',
     './styles/main-img-section.component.css',
-    './styles/steps-section.component.css'
+    './styles/steps-section.component.css',
+    './styles/order-section.component.css'
   ]
 })
 export class PlanComponent {
