@@ -40,12 +40,6 @@
   color: var(--dark-cyan);
 }
 
-.order_summary_info .order_summary_text span.underline{
-  width: 40px;
-  height: 30px;
-  content: "fdsafdsa";
-}
-
 .order_button{
   width: 217px;
   height: 56px;
@@ -67,4 +61,18 @@
 
 @media(min-width: 768px){
 
+  .order_summary{
+    width: 689px;
+    gap: 3rem;
+    margin-top: 6rem;
+  }
+
+  .order_summary_info{
+    width: 100%;
+    padding: 1.8rem 3rem;
+  }
+
+  .order_summary_info .order_summary_text{
+    width: 602px;
+  }
 }
