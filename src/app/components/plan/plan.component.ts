@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-plan',
@@ -39,8 +39,8 @@ export class PlanComponent {
 
   options = [
     {
+      id: 'preferences',
       question: 'How do you drink your coffee?',
-      category: 'drink',
       innerOptions: [
         {
           optionName: 'Capsule',
@@ -57,8 +57,8 @@ export class PlanComponent {
       ]
     },
     {
+      id: 'beanType',
       question: 'What type of coffee?',
-      category: 'type',
       innerOptions: [
         {
           optionName: 'Single origin',
@@ -75,8 +75,8 @@ export class PlanComponent {
       ]
     },
     {
+      id: 'quantity',
       question: 'How much would you like??',
-      category: 'howMuch',
       innerOptions: [
         {
           optionName: '250g',
@@ -93,8 +93,8 @@ export class PlanComponent {
       ]
     },
     {
+      id: 'grindOption',
       question: 'Want us to grind them?',
-      category: 'grind',
       innerOptions: [
         {
           optionName: 'Wholebean',
@@ -111,8 +111,8 @@ export class PlanComponent {
       ]
     },
     {
+      id: 'deliveries',
       question: 'How often should we deliver?',
-      category: 'howOften',
       innerOptions: [
         {
           optionName: 'Every week',
@@ -128,31 +128,37 @@ export class PlanComponent {
         }
       ]
     },
-
   ];
 
   indexList = [
     {
+      id: 'preferences',
       number: '01',
       name: 'Preferences'
     },
     {
+      id: 'beanType',
       number: '02',
       name: 'Bean type'
     },
     {
+      id: 'quantity',
       number: '03',
       name: 'Quantity'
     },
     {
+      id: 'grindOption',
       number: '04',
       name: 'Grind option'
     },
     {
+      id: 'deliveries',
       number: '05',
       name: 'Deliveries'
     },
   ]
+
+  @ViewChild('listOfOptions') listOfOptions!: ElementRef<HTMLUListElement>;
 
   addActiveClass(event: HTMLLIElement){
     const li = event;
@@ -166,27 +172,67 @@ export class PlanComponent {
     }
   }
 
-  selectOption(event: HTMLLIElement, optionName: string){
+  openDropDown(event: HTMLDivElement){
+    const optionPicked = event;
+    const ulPicked = event.nextElementSibling as HTMLUListElement;
+
+    optionPicked.classList.toggle('openInnerList');
+    ulPicked.classList.toggle('openedList');
+  }
+
+  selectOption(event: HTMLLIElement, optionName: string, indexList: HTMLUListElement){
     const li = event;
+    const listOfIndex = indexList;
 
-    if(li.id === 'drink'){
+    if(li.id === 'preferences'){
       this.howYouDrinkYourCoffee === optionName ? this.howYouDrinkYourCoffee = '' : this.howYouDrinkYourCoffee = optionName;
+
+      if(this.howYouDrinkYourCoffee !== ''){
+        listOfIndex.querySelector('.preferences')?.classList.add('completedOption')
+      } else {
+        listOfIndex.querySelector('.preferences')?.classList.remove('completedOption')
+      }
     }
 
-    if(li.id === 'type'){
+    if(li.id === 'beanType'){
       this.typeOfCoffee === optionName ? this.typeOfCoffee = '' : this.typeOfCoffee = optionName;
+
+      if(this.typeOfCoffee !== ''){
+        listOfIndex.querySelector('.beanType')?.classList.add('completedOption')
+      } else {
+        listOfIndex.querySelector('.beanType')?.classList.remove('completedOption')
+      }
     }
 
-    if(li.id === 'howMuch'){
+    if(li.id === 'quantity'){
       this.howMuch === optionName ? this.howMuch = '' : this.howMuch = optionName;
+
+      if(this.howMuch !== ''){
+        listOfIndex.querySelector('.quantity')?.classList.add('completedOption')
+      } else {
+        listOfIndex.querySelector('.quantity')?.classList.remove('completedOption')
+      }
     }
 
-    if(li.id === 'grind'){
+    if(li.id === 'grindOption'){
       this.grind === optionName ? this.grind = '' : this.grind = optionName;
+
+      if(this.grind !== ''){
+        listOfIndex.querySelector('.grindOption')?.classList.add('completedOption')
+      } else {
+        listOfIndex.querySelector('.grindOption')?.classList.remove('completedOption')
+      }
     }
 
-    if(li.id === 'howOften'){
+    if(li.id === 'deliveries'){
       this.howOften === optionName ? this.howOften = '' : this.howOften = optionName;
+
+      if(this.howOften !== ''){
+        listOfIndex.querySelector('.deliveries')?.classList.add('completedOption')
+      } else {
+        listOfIndex.querySelector('.deliveries')?.classList.remove('completedOption')
+      }
     }
   }
+
 }

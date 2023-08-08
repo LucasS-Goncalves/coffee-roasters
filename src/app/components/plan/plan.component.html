@@ -42,27 +42,32 @@
   </section>
 
   <section class="order">
-    <ul class="index_section">
-      <li class="index_item" *ngFor="let item of indexList">
-        <p class="number">
-          {{item.number}}
-        </p>
-        <h4 class="name">
-          {{item.name}}
-        </h4>
-      </li>
+    <ul class="index_list" #index_list>
+
+        <li class="index_item {{item.id}}" *ngFor="let item of indexList, let i = index" #indexItem>
+            <article class="item_info">
+              <p class="number">
+                {{item.number}}
+              </p>
+              <h4 class="name">
+                {{item.name}}
+              </h4>
+            </article>
+          <span class="border_bottom" *ngIf="i < indexList.length - 1"></span>
+        </li>
+
     </ul>
 
-    <ul class="listOfOptions">
+    <ul class="listOfOptions" #listOfOptions>
       <li class="option" *ngFor="let option of options">
-        <div class="question_and_arrow_div">
+        <div class="question_and_arrow_div" #openDropDownDiv (click)="openDropDown(openDropDownDiv)">
           <h2 class="question">
             {{option.question}}
           </h2>
           <svg class="arrow" width="19" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M15.949.586l2.828 2.828-9.096 9.096L.586 3.414 3.414.586l6.267 6.267z" fill="#0E8784" fill-rule="nonzero"/></svg>
         </div>
         <ul class="inner_options_list">
-          <li class="inner_option" (click)="addActiveClass(li); selectOption(li, innerOption.optionName)" #li *ngFor="let innerOption of option.innerOptions" id="{{option.category}}">
+          <li class="inner_option" (click)="addActiveClass(li); selectOption(li, innerOption.optionName, index_list)" #li *ngFor="let innerOption of option.innerOptions" id="{{option.id}}">
             <h3 class="inner_option_name">
               {{innerOption.optionName}}
             </h3>

@@ -1,15 +1,13 @@
 .order{
   width: 328px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
-  margin-top: 7rem;
+  margin-top: 8rem;
 }
 
-.index_section .index_item{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.index_list{
+  display: none;
 }
 
 .listOfOptions{
@@ -17,13 +15,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 7rem;
+  gap: 1.5rem;
 }
 
 .listOfOptions .option{
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 }
 
 .listOfOptions .option .question_and_arrow_div{
@@ -35,7 +32,12 @@
 }
 
 .listOfOptions .option .question_and_arrow_div .arrow{
+  rotate: 0;
+  transition: .2s;
+}
 
+.listOfOptions .option .question_and_arrow_div.openInnerList .arrow{
+  rotate: -180deg;
 }
 
 .listOfOptions .option .question_and_arrow_div .question{
@@ -53,6 +55,21 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  position: relative;
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.listOfOptions .option .inner_options_list.openedList{
+  opacity: 1;
+  visibility: visible;
+  height: 452px;
+  margin-top: 2rem;
+  margin-bottom: 4.5rem;
 }
 
 .listOfOptions .option .inner_options_list .inner_option{
@@ -99,8 +116,8 @@
     width: 689px;
   }
 
-  .listOfOptions .option{
-    gap: 2.5rem;
+  .listOfOptions{
+    gap: 2rem;
   }
 
   .listOfOptions .option .question_and_arrow_div .question{
@@ -115,6 +132,11 @@
     justify-content: space-between;
   }
 
+  .listOfOptions .option .inner_options_list.openedList{
+    height: 250px;
+    margin-top: 2.5rem;
+  }
+
   .listOfOptions .option .inner_options_list .inner_option{
     width: 223px;
     height: 250px;
@@ -126,7 +148,66 @@
 @media(min-width: 1200px){
 
   .order{
+    width: 1050px;
+  }
+
+  .index_list{
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .index_list .index_item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .index_list .index_item .item_info{
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.8rem;
+    align-items: center;
+    margin-bottom: .6rem;
+    cursor: pointer;
+  }
+
+  .index_list .index_item .item_info .number{
+    font-size: 1.5rem;
+    font-family: var(--fraunces);
+    font-weight: 900;
+    line-height: 32px;
+    color: var(--grey);
+  }
+
+  .index_list .index_item.completedOption .item_info .number{
+    color: var(--dark-cyan);
+  }
+
+  .index_list .index_item .item_info .name{
+    font-size: 1.5rem;
+    font-family: var(--fraunces);
+    font-weight: 900;
+    line-height: 32px;
+    color: var(--grey);
+  }
+
+  .index_list .index_item.completedOption .item_info .name{
+    color: var(--dark-grey-blue);
+  }
+
+  .index_list .index_item .border_bottom{
+    width: 230px;
+    height: 1px;
+    background-color: var(--grey);
+  }
+
+  .listOfOptions{
     width: 730px;
+    gap: 4rem;
   }
 
   .listOfOptions .option .question_and_arrow_div .question{
@@ -134,7 +215,23 @@
     font-size: 2.5rem;
   }
 
+  .listOfOptions .option .inner_options_list.openedList{
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
   .listOfOptions .option .inner_options_list .inner_option{
     width: 228px;
+  }
+}
+
+@media(min-width: 1440px){
+
+  .order{
+    width: 1150px;
+  }
+
+  .index_list, .index_list .index_item .border_bottom{
+    width: 255px;
   }
 }
