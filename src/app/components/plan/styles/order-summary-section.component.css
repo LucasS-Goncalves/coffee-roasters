@@ -5,6 +5,7 @@
   align-items: center;
   gap: 3.5rem;
   margin-top: 8rem;
+  transition: .3s;
 }
 
 .order_summary_info{
@@ -68,11 +69,26 @@
   }
 
   .order_summary_info{
-    width: 100%;
     padding: 1.8rem 3rem;
   }
 
   .order_summary_info .order_summary_text{
     width: 602px;
+  }
+}
+
+@media(min-width: 1200px){
+
+  .order_summary{
+    width: 730px;
+    align-items: flex-end;
+    gap: 2.5rem;
+    margin-right: 5rem;
+    align-self: flex-end;
+  }
+
+  .order_summary_info{
+    width: 100%;
+    padding: 2.8rem 4rem;
   }
 }
