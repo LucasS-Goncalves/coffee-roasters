@@ -175,6 +175,11 @@ export class PlanComponent {
   openDropDown(event: HTMLDivElement){
     const optionPicked = event;
     const ulPicked = event.nextElementSibling as HTMLUListElement;
+    const ulPickedChildrenId = ulPicked.children[0].id;
+
+    if(ulPickedChildrenId === 'grindOption' && this.howYouDrinkYourCoffee === 'Capsule'){
+      return;
+    }
 
     optionPicked.classList.toggle('openInnerList');
     ulPicked.classList.toggle('openedList');
@@ -183,14 +188,23 @@ export class PlanComponent {
   selectOption(event: HTMLLIElement, optionName: string, indexList: HTMLUListElement){
     const li = event;
     const listOfIndex = indexList;
+    const grindQuestion = li.parentNode?.parentNode?.parentNode?.children[3].firstChild as HTMLDivElement;
 
     if(li.id === 'preferences'){
       this.howYouDrinkYourCoffee === optionName ? this.howYouDrinkYourCoffee = '' : this.howYouDrinkYourCoffee = optionName;
 
       if(this.howYouDrinkYourCoffee !== ''){
-        listOfIndex.querySelector('.preferences')?.classList.add('completedOption')
+        listOfIndex.querySelector('.preferences')?.classList.add('completedOption');
       } else {
-        listOfIndex.querySelector('.preferences')?.classList.remove('completedOption')
+        listOfIndex.querySelector('.preferences')?.classList.remove('completedOption');
+      }
+
+      if(this.howYouDrinkYourCoffee === 'Capsule'){
+        listOfIndex.querySelector('.grindOption')?.classList.add('disabled_index');
+        grindQuestion.classList.add('disabled_option');
+      } else {
+        listOfIndex.querySelector('.grindOption')?.classList.remove('disabled_index');
+        grindQuestion.classList.remove('disabled_option');
       }
     }
 
@@ -222,6 +236,8 @@ export class PlanComponent {
       } else {
         listOfIndex.querySelector('.grindOption')?.classList.remove('completedOption')
       }
+
+
     }
 
     if(li.id === 'deliveries'){

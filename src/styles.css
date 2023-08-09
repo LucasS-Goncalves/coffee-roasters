@@ -23,6 +23,10 @@ html, body{
   --big-selection-option: #F4F1EB;
   --fraunces: 'Fraunces', serif;
   --barlow: 'Barlow', sans-serif;
+  --index-name-color: hsl(216, 10%, 69%);
+  --index-number-color: hsl(219, 14%, 77%);
+  --disabled-index-name: hsl(222, 28%, 88%);
+  --disabled-index-number: hsl(220, 26%, 87%);
 }
 
 p,h1,h2,h3,h4,h5,h6{

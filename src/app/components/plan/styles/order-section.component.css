@@ -37,6 +37,10 @@
   cursor: pointer;
 }
 
+.listOfOptions .option .question_and_arrow_div.disabled_option{
+  opacity: .4;
+}
+
 .listOfOptions .option .question_and_arrow_div .arrow{
   rotate: 0;
   transition: .2s;
@@ -189,7 +193,7 @@
     font-family: var(--fraunces);
     font-weight: 900;
     line-height: 32px;
-    color: var(--grey);
+    color: var(--index-number-color);
   }
 
   .index_list .index_item.completedOption .item_info .number{
@@ -201,7 +205,7 @@
     font-family: var(--fraunces);
     font-weight: 900;
     line-height: 32px;
-    color: var(--grey);
+    color: var(--index-name-color);
   }
 
   .index_list .index_item.completedOption .item_info .name{
@@ -212,6 +216,13 @@
     width: 230px;
     height: 1px;
     background-color: var(--grey);
+  }
+
+  .index_list .index_item.disabled_index .item_info .name{
+    color: var(--disabled-index-name);
+  }
+  .index_list .index_item.disabled_index .item_info .number{
+    color: var(--disabled-index-number);
   }
 
   .listOfOptions{
