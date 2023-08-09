@@ -59,6 +59,11 @@
   background-color: var(--main-button-hover);
 }
 
+.order_button.disabledButton{
+  background-color: var(--grey);
+  opacity: .4;
+}
+
 @media(min-width: 768px){
 
   .order_summary{

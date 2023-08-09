@@ -11,8 +11,9 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
     './styles/order-summary-section.component.css'
   ]
 })
-export class PlanComponent {
+export class PlanComponent{
 
+  validPlan = false;
   howYouDrinkYourCoffee = '';
   typeOfCoffee = '';
   howMuch = '';
@@ -200,6 +201,7 @@ export class PlanComponent {
       }
 
       if(this.howYouDrinkYourCoffee === 'Capsule'){
+        this.grind = '';
         listOfIndex.querySelector('.grindOption')?.classList.add('disabled_index');
         grindQuestion.classList.add('disabled_option');
       } else {
@@ -248,6 +250,18 @@ export class PlanComponent {
       } else {
         listOfIndex.querySelector('.deliveries')?.classList.remove('completedOption')
       }
+    }
+
+    this.validatePlanCreation();
+  }
+
+  validatePlanCreation(){
+    if(this.howYouDrinkYourCoffee === 'Capsule' && this.typeOfCoffee !== '' && this.howMuch !== '' && this.howOften !== '') {
+      this.validPlan = true;
+    } else if((this.howYouDrinkYourCoffee !== 'Capsule' && this.howYouDrinkYourCoffee !== '') && this.typeOfCoffee !== '' && this.howMuch !== '' && this.howMuch !== '' && this.grind !== '' && this.howOften !== ''){
+      this.validPlan = true;
+    } else {
+      this.validPlan = false;
     }
   }
 }
