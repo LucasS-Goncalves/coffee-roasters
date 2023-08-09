@@ -95,7 +95,7 @@
           sent to me <span>{{howOften !== '' ? howOften : '_____'}}</span>.”
         </p>
       </article>
-      <button class="order_button" [ngClass]="{'disabledButton': !validPlan}" (click)="createPlan()">Create my plan!</button>
+      <button class="order_button" [disabled]="!validPlan" [ngClass]="{'disabledButton': !validPlan}" (click)="createPlan()">Create my plan!</button>
     </section>
 
   </section>
