@@ -1,6 +1,7 @@
 .modal{
   width: 327px;
   height: 597px;
+  position: relative;
   margin: 0 auto;
   margin-top: 2rem;
   border: none;
@@ -11,9 +12,18 @@
   background-color: hsl(215, 19%, 25%, 50%);
 }
 
+.close_modal{
+  position: absolute;
+  top: 4%;
+  right: 5%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .modal_title_div{
   width: 100%;
-  padding: 1.8rem 1rem;
+  padding: 1.8rem;
   background-color: var(--dark-grey-blue);
   margin-bottom: 2.2rem;
 }
@@ -78,4 +88,65 @@
   border-radius: 5px;
   background-color: var(--dark-cyan);
   color: var(--light-cream);
+  transition: .3s;
+  cursor: pointer;
+}
+
+.price_div .checkout_button_mobile:hover,
+.price_div .checkout_button:hover{
+  background-color: var(--main-button-hover);
+}
+
+@media(min-width: 768px){
+
+  .modal{
+    width: 540px;
+    margin-top: 1.2rem;
+  }
+
+  .modal_title_div{
+    padding: 2.5rem 3.5rem;
+  }
+
+  .modal_title_div .modal_title{
+    font-size: 2.5rem;
+    line-height: 48px;
+  }
+
+  .summary_text{
+    width: 428px;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+  }
+
+  .summary_text .confimation_text{
+    font-size: 1rem;
+    line-height: 26px;
+  }
+
+  .price_div{
+    width: 428px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .price_div .price{
+    display: block;
+    font-size: 2rem;
+    font-family: var(--fraunces);
+    font-weight: 900;
+    line-height: 36px;
+    color: var(--dark-grey-blue);
+  }
+
+  .price_div .checkout_button_mobile{
+    display: none;
+  }
+
+  .price_div .checkout_button{
+    display: block;
+    width: 217px;
+  }
+
 }

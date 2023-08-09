@@ -271,4 +271,8 @@ export class PlanComponent{
   createPlan(){
     this.modal.nativeElement.showModal();
   }
+
+  closeModal(){
+    this.modal.nativeElement.close();
+  }
 }
