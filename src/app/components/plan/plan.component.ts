@@ -8,7 +8,8 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
     './styles/main-img-section.component.css',
     './styles/steps-section.component.css',
     './styles/order-section.component.css',
-    './styles/order-summary-section.component.css'
+    './styles/order-summary-section.component.css',
+    './styles/modal.component.css'
   ]
 })
 export class PlanComponent{
@@ -161,6 +162,8 @@ export class PlanComponent{
 
   @ViewChild('listOfOptions') listOfOptions!: ElementRef<HTMLUListElement>;
 
+  @ViewChild('modal') modal!: ElementRef<HTMLDialogElement>;
+
   addActiveClass(event: HTMLLIElement){
     const li = event;
     const ul = event.parentNode;
@@ -263,5 +266,9 @@ export class PlanComponent{
     } else {
       this.validPlan = false;
     }
+  }
+
+  createPlan(){
+    this.modal.nativeElement.showModal();
   }
 }

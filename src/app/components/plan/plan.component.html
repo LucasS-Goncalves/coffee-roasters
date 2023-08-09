@@ -95,8 +95,38 @@
           sent to me <span>{{howOften !== '' ? howOften : '_____'}}</span>.”
         </p>
       </article>
-      <button class="order_button" [disabled]="!validPlan" [ngClass]="{'disabledButton': !validPlan}">Create my plan!</button>
+      <button class="order_button" [ngClass]="{'disabledButton': !validPlan}" (click)="createPlan()">Create my plan!</button>
     </section>
 
   </section>
 </main>
+
+<dialog class="modal" #modal>
+  <div class="modal_title_div">
+    <h3 class="modal_title">Order Summary</h3>
+  </div>
+  <article class="summary_text">
+    <p class="summary" *ngIf="howYouDrinkYourCoffee !== 'Capsule'">
+      “I drink coffee <span>{{howYouDrinkYourCoffee}}</span>, with a <span>{{typeOfCoffee }}</span> type of bean. <span>{{howMuch}}</span> ground ala <span>{{grind}}</span>, sent to me <span>{{howOften}}</span>.”
+    </p>
+    <p class="summary" *ngIf="howYouDrinkYourCoffee === 'Capsule'">
+      “I drink my coffee using <span>{{howYouDrinkYourCoffee}}</span>, with a <span>{{typeOfCoffee}}</span> type of bean. <span>{{howMuch}}</span>,
+      sent to me <span>{{howOften}}</span>.”
+    </p>
+    <p class="confimation_text">
+      Is this correct? You can proceed to checkout or go back to plan selection if something
+      is off. Subscription discount codes can also be redeemed at the checkout.
+    </p>
+  </article>
+  <div class="price_div">
+    <p class="price">
+      $14.00/mo
+    </p>
+    <button class="checkout_button_mobile">
+      Checkout - $14.00/mo
+    </button>
+    <button class="checkout_button">
+      Checkout
+    </button>
+  </div>
+</dialog>
