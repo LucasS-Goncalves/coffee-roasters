@@ -204,7 +204,6 @@ export class PlanComponent{
       }
 
       if(this.howYouDrinkYourCoffee === 'Capsule'){
-        this.grind = '';
         listOfIndex.querySelector('.grindOption')?.classList.add('disabled_index');
         grindQuestion.classList.add('disabled_option');
       } else {
