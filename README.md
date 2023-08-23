@@ -11,7 +11,7 @@
 <p>Este é o Coffeeroasters subscription site (peguei esse desafio/design no site do Frontend Mentor). Este site tem 3 páginas: home page, about page and plan page. Neste site você pode criar seu próprio plano de café! Você pode escolher o tipo de grão, a quantidade e muito mais! Depois de escolher seu plano, você pode verificar o resumo do seu pedido. Aprendi muito construindo este site, muita lógica teve que ser implementada para fazê-lo funcionar, e para construí-lo usei Angular, HTML e CSS.
 </p>
 
-<p>Também esse projeto no meu LinkedIn: https://www.linkedin.com/in/lucas-gon%C3%A7alves-3a2662252/</p>
+<p>Também postei esse projeto no meu LinkedIn: https://www.linkedin.com/in/lucas-gon%C3%A7alves-3a2662252/</p>
 <br>
 
 
