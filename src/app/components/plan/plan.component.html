@@ -88,11 +88,11 @@
           ORDER SUMMARY
         </h3>
         <p class="order_summary_text" *ngIf="howYouDrinkYourCoffee !== 'Capsule'">
-          “I drink coffee <span>{{howYouDrinkYourCoffee !== '' ? howYouDrinkYourCoffee : '_____'}}</span>, with a <span>{{typeOfCoffee !== '' ? typeOfCoffee : '_____'}}</span> type of bean. <span>{{howMuch !== '' ? howMuch : '_____'}}</span> ground ala <span>{{grind !== '' ? grind : '_____'}}</span>, sent to me <span>{{howOften !== '' ? howOften : '_____'}}</span>.”
+          “I drink coffee <span>{{howYouDrinkYourCoffeeText()}}</span>, with a <span>{{typeOfCoffeeText()}}</span> type of bean. <span>{{howMuchText()}}</span> ground ala <span>{{grindText()}}</span>, sent to me <span>{{howOftenText()}}</span>.”
         </p>
         <p class="order_summary_text" *ngIf="howYouDrinkYourCoffee === 'Capsule'">
-          “I drink my coffee using <span>{{howYouDrinkYourCoffee}}</span>, with a <span>{{typeOfCoffee !== '' ? typeOfCoffee : '_____'}}</span> type of bean. <span>{{howMuch !== '' ? howMuch : '_____'}}</span>,
-          sent to me <span>{{howOften !== '' ? howOften : '_____'}}</span>.”
+          “I drink my coffee using <span>{{howYouDrinkYourCoffeeText()}}</span>, with a <span>{{typeOfCoffeeText()}}</span> type of bean. <span>{{howMuchText()}}</span>,
+          sent to me <span>{{howOftenText()}}</span>.”
         </p>
       </article>
       <button class="order_button" [disabled]="!validPlan" [ngClass]="{'disabledButton': !validPlan}" (click)="createPlan()">Create my plan!</button>

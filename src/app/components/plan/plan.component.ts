@@ -21,6 +21,8 @@ export class PlanComponent{
   grind = '';
   howOften = '';
 
+  howYouDrinkYourCoffeeContent = '';
+
   steps = [
     {
       number: '01',
@@ -273,5 +275,25 @@ export class PlanComponent{
 
   closeModal(){
     this.modal.nativeElement.close();
+  }
+
+  howYouDrinkYourCoffeeText(){
+    return this.howYouDrinkYourCoffee !== '' ? this.howYouDrinkYourCoffee : '_____';
+  }
+
+  typeOfCoffeeText(){
+    return this.typeOfCoffee !== '' ? this.typeOfCoffee : '_____';
+  }
+
+  howMuchText(){
+    return this.howMuch !== '' ? this.howMuch : '_____';
+  }
+
+  grindText(){
+    return this.grind !== '' ? this.grind : '_____';
+  }
+
+  howOftenText(){
+    return this.howOften !== '' ? this.howOften : '_____';
   }
 }
